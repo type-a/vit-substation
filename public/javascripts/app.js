@@ -2,13 +2,13 @@
 
 var request = new XMLHttpRequest();
 function call() {
-    request.open('GET', 'http://localhost:5000/runner');
+    request.open('GET', 'http://192.168.43.163:5000/runner');
     request.onload = function () {
         // console.log(this.responseText);
         var data = JSON.parse(this.responseText);
         console.log(data);
-        $('#voltageR').text(data["currentR"].toFixed(3));
-        $('#currentR').text(data["currentY"].toFixed(3));
+        $('#voltageR').text(data["Line Voltages V RY"].toFixed(3));
+        $('#currentR').text(data["Line Current IR"].toFixed(3));
         // // $('#currentY').text(1 + 'A');
         // // $('#voltageB').text(2+ 'V');
         // // $('#currentB').text();

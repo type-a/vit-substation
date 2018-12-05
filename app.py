@@ -31,16 +31,33 @@ def make_summary():
             if regs:
                 abc = [utils.decode_ieee(f) for f in utils.word_list_to_long(regs)]
                 data = {
-                "currentR" : abc[5],
-                "currentY" : abc[6],
-                "currentB" : 0,
-                "voltageR"  :2,
-                "voltageY" :3,
-                "voltageB" :0,
-                "powerKWH" :4,
-                "powerKVAH" :0,
-                "powerKVAR" :0,
-                "pvoltageR" :0
+                "Power KWH" : "%0.3f"%abc[0],
+                "Power KVAH" : "%0.3f"%abc[1],
+                "Power KVArP" : "%0.3f"%abc[2],
+                "Power KVArN" : "%0.3f"%abc[3],
+                "Line Voltages V RY" : "%0.3f"%abc[4],
+                "Line Voltages V YB" : "%0.3f"%abc[5],
+                "Line Voltages V BR" : "%0.3f"%abc[6],
+                "Line Current IR" : "%0.3f"%abc[7],
+                "Line Current IY" : "%0.3f"%abc[8],
+                "Line Current IB" : "%0.3f"%abc[9],
+                "Active Power Consumed" : "%0.3f"%abc[10],
+                "Reactive Power Consumed" : "%0.3f"%abc[11],
+                "Apparent Power Consumed" : "%0.3f"%abc[12],
+                "Phase Voltages VRN" : "%0.3f"%abc[13],
+                "Phase Voltages VYN" : "%0.3f"%abc[14],
+                "Phase Voltages VBN" : "%0.3f"%abc[15],
+                "Power Factor" : "%0.3f"%abc[16],
+                "Frequency" : "%0.3f"%abc[17],
+                "Real Power on R" : "%0.3f"%abc[18],
+                "Real Power on Y" : "%0.3f"%abc[19],
+                "Real Power on B" : "%0.3f"%abc[20],
+                "Reactive Power on R" : "%0.3f"%abc[21],
+                "Reactive Power on Y" : "%0.3f"%abc[22],
+                "Reactive Power on B" : "%0.3f"%abc[23],
+                "Apparent Power on R" : "%0.3f"%abc[24],
+                "Apparent Power on Y" : "%0.3f"%abc[25],
+                "Apparent Power on B" : "%0.3f"%abc[26] 
                 }
                 return data
     # return ({'A': 1, 'B': 2})
