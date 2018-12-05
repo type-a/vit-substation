@@ -7,7 +7,7 @@ body {
 }
 
 .huge {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .panel-green {
@@ -23,11 +23,6 @@ body {
 .panel-green a {
     color: #5cb85c;
 }
-
-.panel-green a:hover {
-    color: #3d8b3d;
-}
-
 .panel-red {
     border-color: #d9534f;
 }
@@ -63,57 +58,19 @@ body {
 .panel-yellow a:hover {
     color: #df8a13;
 }
-
+/* 
 #stats {
     border-collapse: collapse;
-}
-
-#stats td, #stats th {
-    padding: 3px 5px;
-    min-width: 70px;
-    text-align: right;
-}
-
-.up-arrow {
-    margin-right: 4px;
-    color: #F7605C;
-    cursor: pointer;
-}
-
-.down-arrow {
-    margin-right: 4px;
-    color: rgb(65, 68, 77);
-    cursor: pointer;
-}
+} */
 
 .container {
-    padding-top: 15px;
+    padding-top: 25px;
 }
 
-.btn-reload-small {
-    position: relative;
-    top: 3px;
-    cursor: pointer;
-}
-
-.highcharts-container {
-    height: 250px;
-}
 
 .panel-primary > .panel-heading,
 .panel-green > .panel-heading,
 .panel-red > .panel-heading,
 .panel-yellow > .panel-heading {
-    text-shadow: 1px 1px 1px #444;
-}
-
-#forecast-summary {
-    font-style: italic;
-    font-size: 16px;
-}
-
-#btn-reload-all {
-    margin-left: 10px;
-    position: relative;
-    top: 10px;
+    text-shadow: 2px 2px 2px #444;
 }
