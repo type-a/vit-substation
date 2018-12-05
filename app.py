@@ -69,7 +69,7 @@ def make_summary():
                 abc.insert(27,date)
                 myfile = open('data.csv','a')
                 with myfile:
-                    writer = csv.writer(myfile, ',', quoting=csv.QUOTE_ALL)
+                    writer = csv.writer(myfile, delimiter=',', quoting=csv.QUOTE_ALL)
                     writer.writerow(abc)
                 return data
     # return ({'A': 1, 'B': 2})
