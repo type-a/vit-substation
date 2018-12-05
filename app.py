@@ -6,6 +6,9 @@ from flask_cors import CORS, cross_origin
 from flask_restful import Resource, Api
 # import grovepi 
 import json
+import csv
+import time
+import datetime
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -61,6 +64,13 @@ def make_summary():
                 "Apparent Power on Y" : "%0.3f"%abc[25],
                 "Apparent Power on B" : "%0.3f"%abc[26] 
                 }
+                mydate = datetime.datetime.now()
+                date=datetime.datetime.strftime(mydate,'%Y/%m/%d--%H:%M:%S')
+                abc.insert(27,date)
+                myfile = open('data.csv','a')
+                with myfile:
+                    writer = csv.writer(myfile, ',', quoting=csv.QUOTE_ALL)
+                    writer.writerow(abc)
                 return data
     # return ({'A': 1, 'B': 2})
     
