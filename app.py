@@ -3,11 +3,13 @@ from pyModbusTCP.client import ModbusClient
 from pyModbusTCP import utils
 from flask import jsonify
 from flask_cors import CORS, cross_origin
-
+from flask_restful import Resource, Api
+# import grovepi 
 import json
 
 app = Flask(__name__)
 cors = CORS(app)
+api = Api(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 
@@ -77,4 +79,4 @@ def runner():
     return response
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', port=90, debug=True)
