@@ -49,7 +49,7 @@
                             <div class="row">
                                 <div class="col-xs-3">
                                     <!-- <i class="fa fa-battery-full" aria-hidden="true" fa-5x"></i> -->
-
+                                    <!-- <i class="text"> VOLTAGE </i> -->
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div id="voltageR" class="huge">V</div>
@@ -100,8 +100,8 @@
                                     <!-- <i class="fa fa-home fa-5x"></i> -->
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div id="powerKWH" class="huge">KWH</div>
-                                    <div>KWH READING <span id="curr-hum-inside"></span></div>
+                                    <div id="freq" class="huge">Hz</div>
+                                    <div>Hz<span id="hz"></span></div>
                                 </div>
                             </div>
                         </div>
@@ -116,8 +116,7 @@
                                     <!-- <i class="fa fa-home fa-5x"></i> -->
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div id="pvoltageR" class="huge">V</div>
-                                    <div>current: <span id="lcurrentR"></span></div>
+                                    <div id="lvoltageR" class="huge">V</div>
                                 </div>
                             </div>
                         </div>
@@ -132,8 +131,7 @@
                                     <!-- <i class="fa fa-home fa-5x"></i> -->
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div id="pvoltageY" class="huge">V</div>
-                                    <div>current: <span id="lcurrentY"></span></div>
+                                    <div id="lvoltageY" class="huge">V</div>
                                 </div>
                             </div>
                         </div>
@@ -148,8 +146,7 @@
                                     <!-- <i class="fa fa-home fa-5x"></i> -->
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div id="pvoltageB" class="huge">V</div>
-                                    <div>current: <span id="lcurrentB"></span></div>
+                                    <div id="lvoltageB" class="huge">V</div>
                                 </div>
                             </div>
                         </div>
@@ -164,8 +161,8 @@
                                     <!-- <i class="fa fa-home fa-5x"></i> -->
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div id="KVAH" class="huge">KVAh</div>
-                                    <div> KVAh READING<span id="curr-hum-inside1"></span></div>
+                                    <div id="pf" class="huge">power factor</div>
+                                    <!-- <div> KVAh READING<span id="curr-hum-inside1"></span></div> -->
                                 </div>
                             </div>
                         </div>
@@ -180,8 +177,7 @@
                                     <!-- <i class="fa fa-home fa-5x"></i> -->
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div id="curr-temp-inside1" class="huge">V</div>
-                                    <div>current: <span id="curr-hum-inside1"></span></div>
+                                    <div id="KW_R" class="huge">V</div>
                                 </div>
                             </div>
                         </div>
@@ -196,8 +192,7 @@
                                     <!-- <i class="fa fa-home fa-5x"></i> -->
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div id="curr-temp-inside1" class="huge">V</div>
-                                    <div>current: <span id="curr-hum-inside1"></span></div>
+                                    <div id="KW_Y" class="huge">V</div>
                                 </div>
                             </div>
                         </div>
@@ -212,8 +207,7 @@
                                     <!-- <i class="fa fa-home fa-5x"></i> -->
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div id="curr-temp-inside1" class="huge">V</div>
-                                    <div>current: <span id="curr-hum-inside1"></span></div>
+                                    <div id="KW_B" class="huge">V</div>                               
                                 </div>
                             </div>
                         </div>
@@ -228,8 +222,8 @@
                                     <!-- <i class="fa fa-home fa-5x"></i> -->
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div id="curr-temp-inside1" class="huge">V</div>
-                                    <div>current: <span id="curr-hum-inside1"></span></div>
+                                    <div id="KW" class="huge">V</div>
+                                    <!-- <div>.. </div> -->
                                 </div>
                             </div>
                         </div>
@@ -244,8 +238,7 @@
                                     <!-- <i class="fa fa-home fa-5x"></i> -->
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div id="curr-temp-inside1" class="huge">V</div>
-                                    <div>current: <span id="curr-hum-inside1"></span></div>
+                                    <div id="KV_R" class="huge">V</div>
                                 </div>
                             </div>
                         </div>
@@ -260,8 +253,158 @@
                                     <!-- <i class="fa fa-home fa-5x"></i> -->
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div id="curr-temp-inside1" class="huge">V</div>
-                                    <div>current: <span id="curr-hum-inside1"></span></div>
+                                    <div id="KV_Y" class="huge">V</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <!-- Currently inside -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <!-- <i class="fa fa-home fa-5x"></i> -->
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="KV_B" class="huge">V</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <!-- Currently inside -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <!-- <i class="fa fa-home fa-5x"></i> -->
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="KVAr" class="huge">V</div>
+                                    <!-- <div>.. </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <!-- Currently inside -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <!-- <i class="fa fa-home fa-5x"></i> -->
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="apKV_R" class="huge">V</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <!-- Currently inside -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <!-- <i class="fa fa-home fa-5x"></i> -->
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="apKV_Y" class="huge">V</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <!-- Currently inside -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <!-- <i class="fa fa-home fa-5x"></i> -->
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="apKV_B" class="huge">V</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <!-- Currently inside -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <!-- <i class="fa fa-home fa-5x"></i> -->
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="KV" class="huge">V</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <!-- Currently inside -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <!-- <i class="fa fa-home fa-5x"></i> -->
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="KW" class="huge">V</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <!-- Currently inside -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <!-- <i class="fa fa-home fa-5x"></i> -->
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="KVArh" class="huge">V</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <!-- Currently inside -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <!-- <i class="fa fa-home fa-5x"></i> -->
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="KVh" class="huge">V</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <!-- Currently inside -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <!-- <i class="fa fa-home fa-5x"></i> -->
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="time" class="huge">hh::mm::ss</div>
                                 </div>
                             </div>
                         </div>

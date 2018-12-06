@@ -37,10 +37,6 @@ body {
     color: #d9534f;
 }
 
-.panel-red a:hover {
-    color: #b52b27;
-}
-
 .panel-yellow {
     border-color: #f0ad4e;
 }
@@ -55,9 +51,6 @@ body {
     color: #f0ad4e;
 }
 
-.panel-yellow a:hover {
-    color: #df8a13;
-}
 /* 
 #stats {
     border-collapse: collapse;

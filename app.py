@@ -19,7 +19,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 def make_summary():
     SERVER_HOST = "192.168.43.239"
     SERVER_PORT = 502
-    SERVER_UNIT_ID = 8
+    SERVER_UNIT_ID = 2
 
     c = ModbusClient()
     c.host(SERVER_HOST)
